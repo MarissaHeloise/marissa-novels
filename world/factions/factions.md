@@ -1,6 +1,6 @@
 # 灵衍世界势力档案 (Faction Archives)
 
-**文档说明**：本档案为世界势力总纲，与 `world/settings/world_map.md`、`world/settings/timeline.md`、`world/locations/archives/` 地点档案、`.novelkit/memory/constitution.md` 及 `world/settings/worldview.md` 保持一致；称谓与界域划分遵循修真小说设定。**剧情时间锚点**：大衍景帝三十五年春（见 `timeline.md`）。
+**文档说明**：本档案为世界势力总纲，与 `world/settings/world_map.md`、`world/settings/timeline.md`、`world/locations/archives/` 地点档案、`.novelkit/memory/constitution.md` 及 `world/settings/worldview.md` 保持一致；称谓与界域划分遵循修真小说设定。**剧情时间锚点**：大衍景帝三十五年春（见 `timeline.md`）。各势力**主修修士类型**（剑修、符修、魔修、血修等）全分类及正道↔魔修对照见 `world/settings/修士类型全分类.md`。
 
 **界域归属**：
 - **凡界**：市井九流、地脉九司（含影卫）、大衍王朝；与地府在亡魂、厉鬼处理上协作。
