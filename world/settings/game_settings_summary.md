@@ -108,12 +108,12 @@
 | 三界、修为、灵浊 | `worldview.md`、`constitution.md` |
 | 灵衍镜、天命值、镜中人 | `constitution.md` § 系统与天命 |
 | 地府、灵魂、轮回 | `underworld_soul_system.md` |
-| 势力与地图 | `factions_36.md`、`spirit_realms_seven_domains.md`、`world_map.md` |
+| 势力与地图 | `factions.md`、`spirit_realms_seven_domains.md`、`world_map.md` |
 | 林微成长与主线 | `plot_outline.md` |
 
 ---
 
 ## 七、元数据
 
-- **关联文档**：`constitution.md`、`worldview.md`、`plot_outline.md`、`underworld_soul_system.md`、`factions_36.md`
+- **关联文档**：`constitution.md`、`worldview.md`、`plot_outline.md`、`underworld_soul_system.md`、`factions.md`
 - **设计原则**：林微唯一主角、林微视角；灵衍镜为唯一金手指；剧情与选择服务天命/世界重塑主题；玩法与表现不违背小说宪法用词与基调。

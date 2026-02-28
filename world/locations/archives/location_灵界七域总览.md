@@ -81,7 +81,7 @@
 灵界七域是灵界修炼文明的核心舞台，也是林微进入灵界后的主要活动区域。具体到单域的地理、势力与人文细节，请优先参照：
 
 - 地理与资源：`world/settings/world_map.md`  
-- 宗门与势力：`world/factions/factions_36.md`  
+- 宗门与势力：`world/factions/factions.md`  
 - 区域设定细节：`world/settings/spirit_realms_seven_domains.md`
 
 ## 11. 元数据 (Metadata)

@@ -43,7 +43,6 @@
 | location_凌霄符殿.md | 凌霄符殿 | 灵界 |
 | location_青丘.md | 青丘 | 灵界 |
 | location_浊界.md | 浊界 | 浊界 |
-| location_浊界..md | （同上，请统一为 location_浊界.md） | 浊界 |
 | location_魔罗殿.md | 魔罗殿 | 浊界·九渊 |
 | location_血影门.md | 血影门 | 浊界·九渊 |
 | location_万毒窟.md | 万毒窟 | 浊界·九渊 |

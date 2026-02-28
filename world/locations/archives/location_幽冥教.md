@@ -33,4 +33,4 @@
 ## 5. 元数据 (Metadata)
 
 - **关联势力**：幽冥教、地府（对立）
-- **关联文档**：`world_map.md` §2.3、`factions_36.md`、`underworld_soul_system.md`、`location_浊界..md`
+- **关联文档**：`world_map.md` §2.3、`factions.md`、`underworld_soul_system.md`、`location_浊界.md`
