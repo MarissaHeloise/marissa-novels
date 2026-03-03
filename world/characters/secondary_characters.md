@@ -132,6 +132,7 @@
 | 档案文件名 | 角色名称 | 所属势力/卷 |
 | :--- | :--- | :--- |
 | [character_林啸风.md](character_林啸风.md) | 林啸风 | 林家·大衍 |
+| [character_顾云舒.md](character_顾云舒.md) | 顾云舒 | 林家·背景（已故） |
 | [character_柳梦璃.md](character_柳梦璃.md) | 柳梦璃 | 林家·大衍 |
 | [character_林婉.md](character_林婉.md) | 林婉 | 林家·第一卷/第二卷（登基+双魂） |
 | [character_绛罗.md](character_绛罗.md) | 绛罗 | 林婉体内·第二卷（双魂共生） |

@@ -9,37 +9,35 @@
                            "activated_by":  null
                        },
     "current_chapter":  {
-                            "id":  "volume1-chapter-007",
-                            "title":  "传承初练・炼器入门",
-                            "number":  7,
-                            "file_path":  "chapters/volume1/chapter-007.md",
-                            "word_count":  5300,
-                            "status":  "completed",
-                            "created_at":  "2026-03-02T23:00:00Z",
-                            "last_modified":  "2026-03-02T24:00:00Z",
-                            "written_at":  "2026-03-02T23:30:00Z",
-                            "completed_at":  "2026-03-02T24:00:00Z"
+                            "id":  "volume1-chapter-031",
+                            "title":  "初遇慕清歌",
+                            "number":  31,
+                            "file_path":  ".novelkit/chapters/volume1-chapter-031/plan.md",
+                            "word_count":  0,
+                            "status":  "planned",
+                            "created_at":  "2026-03-03T00:00:00Z",
+                            "last_modified":  "2026-03-03T00:00:00Z"
                         },
     "novel":  {
                   "title":  "灵衍万华录",
-                  "total_chapters":  7,
-                  "total_words":  33000,
+                  "total_chapters":  8,
+                  "total_words":  36000,
                   "status":  "in_progress",
                   "created_at":  "2026-02-27T16:29:43Z",
-                  "last_modified":  "2026-03-02T20:00:00Z"
+                  "last_modified":  "2026-03-02T24:00:00Z"
               },
     "session":  {
-                    "last_action":  "Confirmed chapter volume1-chapter-007 (传承初练・炼器突飞)",
-                    "last_action_time":  "2026-03-02T24:00:00Z",
-                    "last_action_command":  "chapter-confirm",
-                    "last_modified_file":  "chapters/volume1/chapter-007.md",
+                    "last_action":  "Planned chapter volume1-chapter-031 (初遇慕清歌) + 032-075 概要",
+                    "last_action_time":  "2026-03-03T00:00:00Z",
+                    "last_action_command":  "chapter-plan",
+                    "last_modified_file":  ".novelkit/chapters/volume1-chapter-031/plan.md",
                     "action_context":  null
                 },
     "statistics":  {
                        "writers_created":  0,
                        "writers_switched":  0,
                        "chapters_created":  1,
-                       "chapters_completed":  7,
+                       "chapters_completed":  8,
                        "total_writing_sessions":  2
                    },
     "history":  {
@@ -49,9 +47,9 @@
                     "chapter_creations":  [
                         {
                             "chapter_id":  "volume1-chapter-001",
-                            "title":  "魂穿林家",
+                            "title":  "孤女废材·寒府寄身",
                             "number":  1,
-                            "word_count":  4500,
+                            "word_count":  2200,
                             "completed_at":  "2026-03-02T12:00:00Z",
                             "new_characters":  [],
                             "new_items":  [],
@@ -61,9 +59,9 @@
                         },
                         {
                             "chapter_id":  "volume1-chapter-002",
-                            "title":  "识海悬镜",
+                            "title":  "退婚之辱·绝境逢生",
                             "number":  2,
-                            "word_count":  4100,
+                            "word_count":  4200,
                             "completed_at":  "2026-03-02T14:00:00Z",
                             "new_characters":  [],
                             "new_items":  [],
@@ -130,9 +128,50 @@
                             "new_locations":  [],
                             "new_subplots":  [],
                             "new_foreshadowing":  ["玉简与淬骨玉感应", "玄衣人搜查逼近"]
+                        },
+                        {
+                            "chapter_id":  "volume1-chapter-008",
+                            "title":  "灵气伴炼・林婉登场",
+                            "number":  8,
+                            "word_count":  3000,
+                            "completed_at":  "2026-03-02T24:00:00Z",
+                            "new_characters":  [],
+                            "new_items":  [],
+                            "new_locations":  [],
+                            "new_subplots":  [],
+                            "new_foreshadowing":  ["秋蝉灵气伴炼→Ch13剑骨", "林婉管账→Ch9账房炼心"]
                         }
                     ],
                     "recent_actions":  [
+                        {
+                            "action":  "planned_chapter",
+                            "chapter_id":  "volume1-chapter-031",
+                            "chapter_title":  "初遇慕清歌",
+                            "chapter_number":  31,
+                            "timestamp":  "2026-03-03T00:00:00Z",
+                            "command":  "chapter-plan"
+                        },
+                        {
+                            "action":  "confirmed_chapter",
+                            "chapter_id":  "volume1-chapter-002",
+                            "new_content":  {"characters":  0, "items":  0, "locations":  0, "subplots":  0, "foreshadowing":  0},
+                            "timestamp":  "2026-03-02T25:00:00Z",
+                            "command":  "chapter-confirm"
+                        },
+                        {
+                            "action":  "confirmed_chapter",
+                            "chapter_id":  "volume1-chapter-001",
+                            "new_content":  {"characters":  0, "items":  0, "locations":  0, "subplots":  0, "foreshadowing":  0},
+                            "timestamp":  "2026-03-02T24:30:00Z",
+                            "command":  "chapter-confirm"
+                        },
+                        {
+                            "action":  "confirmed_chapter",
+                            "chapter_id":  "volume1-chapter-008",
+                            "new_content":  {"characters":  0, "items":  0, "locations":  0, "subplots":  0, "foreshadowing":  2},
+                            "timestamp":  "2026-03-02T24:00:00Z",
+                            "command":  "chapter-confirm"
+                        },
                         {
                             "action":  "confirmed_chapter",
                             "chapter_id":  "volume1-chapter-007",
