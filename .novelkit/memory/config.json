@@ -1,6 +1,6 @@
 {
     "version":  "1.0",
-    "last_updated":  "2026-03-02T24:00:00Z",
+    "last_updated":  "2026-03-04T12:00:00Z",
     "current_writer":  {
                            "id":  null,
                            "name":  null,
@@ -12,33 +12,34 @@
                             "id":  "volume1-chapter-031",
                             "title":  "初遇慕清歌",
                             "number":  31,
-                            "file_path":  ".novelkit/chapters/volume1-chapter-031/plan.md",
-                            "word_count":  0,
-                            "status":  "planned",
+                            "file_path":  "chapters/volume1/chapter-031.md",
+                            "word_count":  4200,
+                            "status":  "written",
                             "created_at":  "2026-03-03T00:00:00Z",
-                            "last_modified":  "2026-03-03T00:00:00Z"
+                            "last_modified":  "2026-03-04T12:00:00Z",
+                            "written_at":  "2026-03-04T12:00:00Z"
                         },
     "novel":  {
                   "title":  "灵衍万华录",
-                  "total_chapters":  8,
-                  "total_words":  36000,
+                  "total_chapters":  9,
+                  "total_words":  40200,
                   "status":  "in_progress",
                   "created_at":  "2026-02-27T16:29:43Z",
-                  "last_modified":  "2026-03-02T24:00:00Z"
+                  "last_modified":  "2026-03-04T12:00:00Z"
               },
     "session":  {
-                    "last_action":  "Planned chapter volume1-chapter-031 (初遇慕清歌) + 032-075 概要",
-                    "last_action_time":  "2026-03-03T00:00:00Z",
-                    "last_action_command":  "chapter-plan",
-                    "last_modified_file":  ".novelkit/chapters/volume1-chapter-031/plan.md",
+                    "last_action":  "Wrote chapter volume1-chapter-031 (初遇慕清歌), 4200 words",
+                    "last_action_time":  "2026-03-04T12:00:00Z",
+                    "last_action_command":  "chapter-write",
+                    "last_modified_file":  "chapters/volume1/chapter-031.md",
                     "action_context":  null
                 },
     "statistics":  {
                        "writers_created":  0,
                        "writers_switched":  0,
                        "chapters_created":  1,
-                       "chapters_completed":  8,
-                       "total_writing_sessions":  2
+                       "chapters_completed":  9,
+                       "total_writing_sessions":  3
                    },
     "history":  {
                     "writer_switches":  [
@@ -143,6 +144,14 @@
                         }
                     ],
                     "recent_actions":  [
+                        {
+                            "action":  "wrote_chapter",
+                            "chapter_id":  "volume1-chapter-031",
+                            "chapter_title":  "初遇慕清歌",
+                            "word_count":  4200,
+                            "timestamp":  "2026-03-04T12:00:00Z",
+                            "command":  "chapter-write"
+                        },
                         {
                             "action":  "planned_chapter",
                             "chapter_id":  "volume1-chapter-031",
