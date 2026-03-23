@@ -58,7 +58,7 @@
 
 ## 10. 备注 (Notes)
 
-九霄域见 `location_九霄域.md`；灵虚山见 `location_灵虚山.md`。factions_36：凌霄符殿，符修门派，苏慕晚所在，活动区域灵界九霄域及灵虚山浮空岛。
+九霄域见 `location_九霄域.md`；灵虚山见 `location_灵虚山.md`。factions：凌霄符殿，符修门派，苏慕晚所在，活动区域灵界九霄域及灵虚山浮空岛。
 
 ## 11. 元数据 (Metadata)
 
@@ -66,4 +66,4 @@
 - **关联势力**：凌霄符殿、妙音坊、紫霄法脉
 - **首次出场**：第三卷及后续
 - **区域状态**：活跃
-- **关联文档**：`factions_36.md`、`spirit_realms_seven_domains.md`、`world_map.md`
+- **关联文档**：`factions.md`、`spirit_realms_seven_domains.md`、`world_map.md`

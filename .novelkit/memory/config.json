@@ -1,6 +1,6 @@
-﻿{
+{
     "version":  "1.0",
-    "last_updated":  "2026-02-27T16:29:43Z",
+    "last_updated":  "2026-03-20T19:55:13Z",
     "current_writer":  {
                            "id":  null,
                            "name":  null,
@@ -9,47 +9,99 @@
                            "activated_by":  null
                        },
     "current_chapter":  {
-                            "id":  null,
-                            "title":  null,
-                            "number":  null,
-                            "file_path":  null,
-                            "word_count":  0,
-                            "status":  "draft",
-                            "created_at":  null,
-                            "last_modified":  null
+                            "id":  "volume1-chapter-030",
+                            "title":  "血染宫廷・情断仇偿",
+                            "number":  30,
+                            "file_path":  "chapters/volume1/chapter-030.md",
+                            "word_count": 3500,
+                            "status":  "confirmed",
+                            "created_at":  "2026-03-21T10:00:00Z",
+                            "last_modified":  "2026-03-21T10:00:00Z",
+                            "written_at":  "2026-03-21T10:00:00Z",
+                            "confirmed_at":  "2026-03-21T10:00:00Z"
                         },
     "novel":  {
-                  "title":  null,
-                  "total_chapters":  0,
-                  "total_words":  0,
-                  "status":  "draft",
+                  "title":  "灵衍万华录",
+                  "total_chapters":  30,
+                  "total_words":  65000,
+                  "status":  "in_progress",
                   "created_at":  "2026-02-27T16:29:43Z",
-                  "last_modified":  "2026-02-27T16:29:43Z"
+                  "last_modified":  "2026-03-21T10:00:00Z"
               },
     "session":  {
-                    "last_action":  "Project initialized",
-                    "last_action_time":  "2026-02-27T16:29:43Z",
-                    "last_action_command":  "novel-setup",
-                    "last_modified_file":  null,
+                    "last_action":  "Confirmed chapters 26-30 (第一卷完结)",
+                    "last_action_time":  "2026-03-21T10:00:00Z",
+                    "last_action_command":  "Confirm",
+                    "last_modified_file":  "chapters/volume1/chapter-030.md",
                     "action_context":  null
                 },
     "statistics":  {
                        "writers_created":  0,
                        "writers_switched":  0,
-                       "chapters_created":  0,
-                       "chapters_completed":  0,
-                       "total_writing_sessions":  0
+                       "chapters_created":  30,
+                       "chapters_completed":  30,
+                       "total_writing_sessions":  10,
+                       "total_words":  65000
                    },
     "history":  {
-                    "writer_switches":  [
-
-                                        ],
+                    "writer_switches":  [],
                     "chapter_creations":  [
-
-                                          ],
+                        {
+                            "chapter_id":  "volume1-chapter-027",
+                            "title":  "疫势危殆・暗盟露马脚",
+                            "number":  27,
+                            "word_count":  4800,
+                            "completed_at":  null,
+                            "new_characters":  [],
+                            "new_items":  [],
+                            "new_locations":  [],
+                            "new_subplots":  [],
+                            "new_foreshadowing":  ["血煞盟令牌", "灵蚀病变异", "林微与二皇子勾结"]
+                        },
+                        {
+                            "chapter_id":  "volume1-chapter-026",
+                            "title":  "皇子试探・虚实博弈",
+                            "number":  26,
+                            "word_count":  4500,
+                            "completed_at":  null,
+                            "new_characters":  [],
+                            "new_items":  [],
+                            "new_locations":  [],
+                            "new_subplots":  [],
+                            "new_foreshadowing":  ["血煞盟暗线", "玉佩纹样"]
+                        },
+                        {
+                            "chapter_id":  "volume1-chapter-025",
+                            "title":  "隐元噬灵・暗布棋子",
+                            "number":  25,
+                            "word_count":  5674,
+                            "completed_at":  "2026-03-19T18:00:00Z",
+                            "new_characters":  [],
+                            "new_items":  [],
+                            "new_locations":  [],
+                            "new_subplots":  [],
+                            "new_foreshadowing":  ["隐元佩侵蚀胎气", "三皇子与血煞盟勾结", "府中暗线"]
+                        }
+                    ],
                     "recent_actions":  [
-
-                                       ]
+                        {
+                            "action":  "wrote_chapter",
+                            "chapter":  "volume1-chapter-027",
+                            "timestamp":  "2026-03-20T19:55:13Z",
+                            "command":  "Write"
+                        },
+                        {
+                            "action":  "confirmed_all_chapters",
+                            "chapters":  "1-25",
+                            "timestamp":  "2026-03-19T18:00:00Z",
+                            "command":  "batch-confirm"
+                        },
+                        {
+                            "action":  "cleaned_old_settings",
+                            "timestamp":  "2026-03-19T18:00:00Z",
+                            "command":  "cleanup-config"
+                        }
+                    ]
                 },
     "constitution":  {
                          "version":  "1.0",

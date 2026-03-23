@@ -58,7 +58,7 @@
 
 ## 10. 备注 (Notes)
 
-幻花域总览见 `location_幻花域.md`。factions_36：青丘妖国，狐族，白涂涂所在，活动区域灵界幻花域；青丘育幼所、花海迷阵。
+幻花域总览见 `location_幻花域.md`。factions：青丘妖国，狐族，白涂涂所在，活动区域灵界幻花域；青丘育幼所、花海迷阵。
 
 ## 11. 元数据 (Metadata)
 
@@ -66,4 +66,4 @@
 - **关联势力**：青丘妖国、幻戏宗、妙音坊、凌霄符殿
 - **首次出场**：第一卷（白涂涂收服）；后续青丘线
 - **区域状态**：活跃
-- **关联文档**：`factions_36.md`、`spirit_realms_seven_domains.md`、`world_map.md`
+- **关联文档**：`factions.md`、`spirit_realms_seven_domains.md`、`world_map.md`

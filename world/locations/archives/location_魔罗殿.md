@@ -29,7 +29,7 @@
 
 ## 4. 历史背景 (Historical Background)
 
-浊界九渊割据，魔罗殿为权力中心与军镇；与蚀骨渊偏军工，阴器、骨甲、傀兵在战时价值暴涨。详见 `location_浊界..md`、`world_map.md` §2.3。
+浊界九渊割据，魔罗殿为权力中心与军镇；与蚀骨渊偏军工，阴器、骨甲、傀兵在战时价值暴涨。详见 `location_浊界.md`、`world_map.md` §2.3。
 
 ## 5. 重要地点 (Important Locations)
 
@@ -39,4 +39,4 @@
 
 - **关联角色**：夜琉璃
 - **关联势力**：魔罗殿、浊世九渊
-- **关联文档**：`world_map.md` §2.3、`factions_36.md`、`location_浊界..md`
+- **关联文档**：`world_map.md` §2.3、`factions.md`、`location_浊界.md`

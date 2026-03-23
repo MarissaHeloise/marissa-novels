@@ -34,4 +34,4 @@
 ## 5. 元数据 (Metadata)
 
 - **关联势力**：无相窟、暗影区网络
-- **关联文档**：`world_map.md` §2.3、`factions_36.md`、`location_浊界..md`
+- **关联文档**：`world_map.md` §2.3、`factions.md`、`location_浊界.md`

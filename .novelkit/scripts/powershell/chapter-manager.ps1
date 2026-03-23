@@ -63,24 +63,40 @@ function Get-ChapterUserFile {
         [int]$ChapterNumber = 0
     )
     
-    # Extract number from chapter_id if number not provided
-    if ($ChapterNumber -eq 0) {
-        if ($ChapterId -match 'chapter-(\d+)$') {
+    # Extract volume and number from chapter_id (e.g., volume1-chapter-026)
+    $volume = "volume1"
+    if ($ChapterId -match 'volume(\d+)-chapter-(\d+)$') {
+        $volume = "volume{0}" -f [int]$matches[1]
+        $ChapterNumber = [int]$matches[2]
+    } elseif ($ChapterId -match 'chapter-(\d+)$') {
+        if ($ChapterNumber -eq 0) {
             $ChapterNumber = [int]$matches[1]
-        } else {
-            $ChapterNumber = 1
         }
+    } elseif ($ChapterNumber -eq 0) {
+        $ChapterNumber = 1
     }
     
-    # Format as chapter-001.md
-    return "chapter-{0:D3}.md" -f $ChapterNumber
+    # Format as volume1/chapter-026.md
+    return "{0}/chapter-{1:D3}.md" -f $volume, $ChapterNumber
+}
+
+# Get volume from chapter ID
+function Get-VolumeFromChapterId {
+    param([string]$ChapterId)
+    
+    if ($ChapterId -match 'volume(\d+)-chapter') {
+        return "volume{0}" -f [int]$matches[1]
+    }
+    return "volume1"
 }
 
 # Get next chapter ID
 function Get-NextChapterId {
+    param([string]$Volume = "volume1")
+    
     $highest = 0
     if (Test-Path $ChaptersMetaDir) {
-        Get-ChildItem -Path $ChaptersMetaDir -Directory -Filter "chapter-*" | ForEach-Object {
+        Get-ChildItem -Path $ChaptersMetaDir -Directory -Filter "$Volume-chapter-*" | ForEach-Object {
             $name = $_.Name
             if ($name -match 'chapter-(\d+)$') {
                 $num = [int]$matches[1]
@@ -90,7 +106,7 @@ function Get-NextChapterId {
             }
         }
     }
-    return "chapter-{0:D3}" -f ($highest + 1)
+    return "{0}-chapter-{1:D3}" -f $Volume, ($highest + 1)
 }
 
 # Get next chapter number
@@ -135,7 +151,9 @@ function Write-JsonOutput {
 
 # Action: Plan
 function Action-Plan {
-    $chapterId = Get-NextChapterId
+    param([string]$Volume = "volume1")
+    
+    $chapterId = Get-NextChapterId -Volume $Volume
     $chapterNumber = Get-NextChapterNumber
     $chapterDir = Join-Path $ChaptersMetaDir $chapterId
     
@@ -204,9 +222,22 @@ function Action-Write {
     
     $chapterMetaDir = Join-Path $ChaptersMetaDir $ChapterId
     $planFile = Join-Path $chapterMetaDir "plan.md"
-    $chapterNumber = Get-NextChapterNumber - 1  # Current chapter number
+    
+    # Extract chapter number from ID
+    if ($ChapterId -match 'chapter-(\d+)$') {
+        $chapterNumber = [int]$matches[1]
+    } else {
+        $chapterNumber = Get-NextChapterNumber - 1
+    }
+    
     $chapterUserFile = Get-ChapterUserFile -ChapterId $ChapterId -ChapterNumber $chapterNumber
     $chapterFile = Join-Path $ChaptersUserDir $chapterUserFile
+    
+    # Ensure volume directory exists
+    $volumeDir = Split-Path $chapterFile -Parent
+    if (-not (Test-Path $volumeDir)) {
+        New-Item -ItemType Directory -Path $volumeDir -Force | Out-Null
+    }
     
     if (-not (Test-Path $planFile)) {
         Write-Error "Plan file not found: $planFile"
@@ -256,7 +287,11 @@ function Action-Polish {
         $chapterFile = Join-Path $RepoRoot $config.current_chapter.file_path
     } else {
         # Fallback: construct from ID
-        $chapterNumber = if ($ChapterId -match 'chapter-(\d+)$') { [int]$matches[1] } else { 1 }
+        if ($ChapterId -match 'chapter-(\d+)$') {
+            $chapterNumber = [int]$matches[1]
+        } else {
+            $chapterNumber = 1
+        }
         $chapterUserFile = Get-ChapterUserFile -ChapterId $ChapterId -ChapterNumber $chapterNumber
         $chapterFile = Join-Path $ChaptersUserDir $chapterUserFile
     }
@@ -315,7 +350,11 @@ function Action-Confirm {
         $chapterFile = Join-Path $RepoRoot $config.current_chapter.file_path
     } else {
         # Fallback: construct from ID
-        $chapterNumber = if ($ChapterId -match 'chapter-(\d+)$') { [int]$matches[1] } else { 1 }
+        if ($ChapterId -match 'chapter-(\d+)$') {
+            $chapterNumber = [int]$matches[1]
+        } else {
+            $chapterNumber = 1
+        }
         $chapterUserFile = Get-ChapterUserFile -ChapterId $ChapterId -ChapterNumber $chapterNumber
         $chapterFile = Join-Path $ChaptersUserDir $chapterUserFile
     }
@@ -350,8 +389,8 @@ function Action-Show {
         if (Test-Path $chapterPath -PathType Container) {
             $chapterId = $Search
         } else {
-            # Try to find by partial match
-            Get-ChildItem -Path $ChaptersMetaDir -Directory -Filter "chapter-*" | ForEach-Object {
+            # Try to find by partial match (support both old and new format)
+            Get-ChildItem -Path $ChaptersMetaDir -Directory | ForEach-Object {
                 if ($_.Name -like "*$Search*") {
                     $chapterId = $_.Name
                     return
@@ -366,7 +405,11 @@ function Action-Show {
     }
     
     # Try user space first, then meta space
-    $chapterNumber = if ($chapterId -match 'chapter-(\d+)$') { [int]$matches[1] } else { 1 }
+    if ($chapterId -match 'chapter-(\d+)$') {
+        $chapterNumber = [int]$matches[1]
+    } else {
+        $chapterNumber = 1
+    }
     $chapterUserFile = Get-ChapterUserFile -ChapterId $chapterId -ChapterNumber $chapterNumber
     $chapterFile = Join-Path $ChaptersUserDir $chapterUserFile
     if (-not (Test-Path $chapterFile)) {
@@ -403,7 +446,11 @@ function Action-Review {
         $chapterFile = Join-Path $RepoRoot $config.current_chapter.file_path
     } else {
         # Fallback: construct from ID
-        $chapterNumber = if ($ChapterId -match 'chapter-(\d+)$') { [int]$matches[1] } else { 1 }
+        if ($ChapterId -match 'chapter-(\d+)$') {
+            $chapterNumber = [int]$matches[1]
+        } else {
+            $chapterNumber = 1
+        }
         $chapterUserFile = Get-ChapterUserFile -ChapterId $ChapterId -ChapterNumber $chapterNumber
         $chapterFile = Join-Path $ChaptersUserDir $chapterUserFile
     }
@@ -432,16 +479,23 @@ function Action-Review {
 
 # Action: List
 function Action-List {
+    param([string]$Volume = "")
+    
     $chapters = @()
     
     if (Test-Path $ChaptersMetaDir) {
         $current = Get-CurrentChapter
         
-        Get-ChildItem -Path $ChaptersMetaDir -Directory -Filter "chapter-*" | ForEach-Object {
+        $filter = if ($Volume) { "$Volume-chapter-*" } else { "*-chapter-*" }
+        Get-ChildItem -Path $ChaptersMetaDir -Directory | Where-Object { $_.Name -like $filter -or $_.Name -like "chapter-*" } | ForEach-Object {
             $chapterId = $_.Name
             $planFile = Join-Path $_.FullName "plan.md"
             # Try user space chapter file
-            $chapterNumber = if ($chapterId -match 'chapter-(\d+)$') { [int]$matches[1] } else { 1 }
+            if ($chapterId -match 'chapter-(\d+)$') {
+                $chapterNumber = [int]$matches[1]
+            } else {
+                $chapterNumber = 1
+            }
             $chapterUserFile = Get-ChapterUserFile -ChapterId $chapterId -ChapterNumber $chapterNumber
             $chapterFile = Join-Path $ChaptersUserDir $chapterUserFile
             
@@ -486,7 +540,8 @@ function Action-List {
 # Main
 switch ($Action) {
     "Plan" {
-        Action-Plan
+        $volume = if ($Arguments.Count -gt 0) { $Arguments[0] } else { "volume1" }
+        Action-Plan -Volume $volume
     }
     "Write" {
         $chapterId = if ($Arguments.Count -gt 0) { $Arguments[0] } else { $null }
@@ -509,7 +564,8 @@ switch ($Action) {
         Action-Show -Search $search
     }
     "List" {
-        Action-List
+        $volume = if ($Arguments.Count -gt 0) { $Arguments[0] } else { "" }
+        Action-List -Volume $volume
     }
     default {
         Write-Error "Unknown action: $Action"
