@@ -1,7 +1,7 @@
 # Chapter 25: 隐元噬灵・暗布棋子
 
 **Chapter Number**: 25  
-**Status**: Written  
+**Status**: Completed  
 **Created**: 2026-03-19T16:38:00Z  
 **Last Modified**: 2026-03-19T17:00:00Z  
 **Actual Word Count**: 5300

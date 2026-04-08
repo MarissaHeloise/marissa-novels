@@ -1,7 +1,7 @@
 # 区域档案：幻花域（青丘幻花）
 
 **创建时间**：2026-03-01
-**最后更新**：2026-03-01
+**最后更新**：2026-03-28
 **ID**：location_幻花域
 **状态**：Active
 
@@ -76,7 +76,8 @@
 
 ## 11. 备注 (Notes)
 
-青丘可另见 `location_青丘.md`；七域总览见 `location_灵界七域总览.md`。
+- **林微线（卷一再会）**：**白涂涂**仍常驻本域；林微赴 **灵蚀界** 外派时 **不专程绕访** 本域。**二人再会**改在 **灵蚀地头**（白涂涂 **主动寻人**），见 `plots/volume1_chapter_plan.md` 第50章、`plots/volume1_remaining_detailed_outline.md`。
+- 青丘可另见 `location_青丘.md`；七域总览见 `location_灵界七域总览.md`。
 
 ## 12. 元数据 (Metadata)
 
